@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :teachers
   devise_for :languages
   devise_for :courses
   root to: "pages#home"
