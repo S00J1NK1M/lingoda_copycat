@@ -1,0 +1,2 @@
+class Langauge < ApplicationRecord
+end
