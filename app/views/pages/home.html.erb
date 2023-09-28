@@ -1,22 +1,29 @@
 
-<div class="banner--unlog">
-  <h1>Wellcome to Lingoda Copycat!</h1>
-   <button class="button--logIN"></button>
+<div class="banner--unlog m-5">
+
+  <h1 class="">Wellcome to Lingoda Copycat!</h1>
+   <%=link_to "LogIN", new_user_session_path, class: "button center" %>
+
 </div>
-<div filtres></div>
+<div filtres>
+  <i class="fa-solid fa-filter $green"></i>
+</div>
 <div class="container">
 
   <div class="grid">
     <% @courses.each do |course| %>
-        <div class="card">
-          <h1> <%= course.language.name %> </h1>
-          <h1> <%= course.level %> </h1>
-          <p><%= course.teacher.name %></p>
-          <p><%= course.start_at.strftime("%d/%m/%y %M:%S") %></p>
+        <div class="card container relativ">
+        <div class="middle">
+          <div class="d-flex">
+            <h1 > <%= course.language.name %> &nbsp; </h1>
+            <h1> <%= course.level %> </h1>
+          </div>
+            <h4>Teacher <%= course.teacher.name %></h4>
+            <h4><%= course.start_at.strftime("%d/%m/%y %M:%S") %></h4>
+          </div>
           <%# course GET    /courses/:id(.:format)  courses#show %>
-          <%= link_to course_path(course.id), class: 'button' do %>
+          <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
         </div>
-          <% end %>
     <% end %>
   </div>
 </div>
