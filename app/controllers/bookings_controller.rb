@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: %i[index new create destroy]
+
   def index
     @bookings = Booking.all
   end
@@ -19,11 +21,12 @@ class BookingsController < ApplicationController
   end
 
   private
+
   def set_booking
     @booking = Booking.find(params[:id])
- end
-# Only allow a list of trusted parameters through.
- def booking_params
-   params.require(:booking).permit(:user_id, :course_id)
+  end
+
+  def booking_params
+    params.require(:booking).permit(:user_id, :course_id)
   end
 end
