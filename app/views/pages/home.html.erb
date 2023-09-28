@@ -9,10 +9,10 @@
   <div class="grid">
     <% @courses.each do |course| %>
         <div class="card">
-          <h1><%= course.language.name</h1>
-          <h1><%= course.level %></h1>
+          <h1> <%= course.language.name %> </h1>
+          <h1> <%= course.level %> </h1>
           <p><%= course.teacher.name %></p>
-          <p><%= course.created_at %></p>
+          <p><%= course.start_at.strftime("%d/%m/%y %M:%S") %></p>
           <%# course GET    /courses/:id(.:format)  courses#show %>
           <%= link_to course_path(course.id), class: 'button' do %>
         </div>
