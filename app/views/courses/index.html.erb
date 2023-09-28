@@ -1,8 +1,21 @@
-<h1>hey</h1>
+<div class="banner--unlog">
+  <h1>Welcome to Lingoda Copycat!</h1>
+   <button class="button--logIN"></button>
+</div>
+<div filtres></div>
+<div class="container">
 
-<% @courses.each do |course| %>
-  <%= course.language.name %>
-  <%= course.teacher.name %>
-  <%= course.level %>
-  <%= course.created_at %>
-<% end %>
+  <div class="grid">
+    <% @courses.each do |course| %>
+        <div class="card">
+          <h1> <%= course.language.name %> </h1>
+          <h1> <%= course.level %> </h1>
+          <p><%= course.teacher.name %></p>
+          <p><%= course.start_at.strftime("%d/%m/%y %M:%S") %></p>
+          <%# course GET    /courses/:id(.:format)  courses#show %>
+          <%= link_to course_path(course.id), class: 'button' do %>
+        </div>
+          <% end %>
+    <% end %>
+  </div>
+</div>
