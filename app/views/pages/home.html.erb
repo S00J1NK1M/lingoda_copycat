@@ -2,7 +2,11 @@
   <div class="container">
     <div class="banner--home mx-5 middle--h">
       <h1 class="">Wellcome to Lingoda Copycat!</h1>
-      <%=link_to "Login", new_user_session_path, class: "button center" %>
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, class: "button center", data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "button center" %>
+      <% end %>
     </div>
   </div>
 </div>
