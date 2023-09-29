@@ -1,19 +1,23 @@
-
-<div class="banner--unlog m-5">
-
-  <h1 class="">Wellcome to Lingoda Copycat!</h1>
-   <%=link_to "LogIN", new_user_session_path, class: "button center" %>
-
+<div class="container">
+<div class="container">
+  <div class="banner--unlog mx-5 middle-h">
+    <h1 class="">Wellcome to Lingoda Copycat!</h1>
+    <%=link_to "LogIN", new_user_session_path, class: "button center" %>
+  </div>
 </div>
-<div filtres>
-  <i class="fa-solid fa-filter $green"></i>
+</div>
+<div class="container">
+  <div class="filtres d-flex mx-5">
+    <i class="fa-solid fa-filter $green"></i>
+
+  </div>
 </div>
 <div class="container">
 
   <div class="grid">
     <% @courses.each do |course| %>
         <div class="card container relativ">
-        <div class="middle">
+        <div class="middle-w">
           <div class="d-flex">
             <h1 > <%= course.language.name %> &nbsp; </h1>
             <h1> <%= course.level %> </h1>
