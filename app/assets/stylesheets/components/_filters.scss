@@ -1,0 +1,31 @@
+
+.filters{
+  height: 50px;
+
+}
+
+.button--filter{
+  color: $green;
+  background: $milk;
+  border-radius: 50px;
+  width: 120px;
+  margin-right: 10px;
+
+  &:hover{
+    background-color: $orange;
+    color: $green;
+  }
+}
+
+.button--filter--green{
+  color: $milk;
+  background: $green;
+  border-radius: 50px;
+  width: 120px;
+  margin-right: 10px;
+
+  &:hover{
+    background-color: $orange;
+    color: $green;
+  }
+}

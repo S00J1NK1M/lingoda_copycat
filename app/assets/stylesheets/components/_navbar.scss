@@ -1,4 +1,5 @@
-.banner--unlog {
+.banner--home {
+  display: flex;
   justify-content: space-between;
   height: 100px;
 }
@@ -10,13 +11,3 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
-.banner--unlog{
-  display: flex;
-  justify-content: space-between
-}
-
-
-
-
-
