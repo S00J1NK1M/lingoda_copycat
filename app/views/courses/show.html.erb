@@ -1,11 +1,8 @@
-
-<div class="card container relativ">
-
-    <h1><strong>The Class with <%= @course.teacher.name %></strong></h1>
-    <h3><strong><%= @course.language.name %></strong></h3>
-    <h5><strong>Level: </strong><%= @course.level %></h5>
-    <h5><strong>Course starts: </strong> <%= @course.start_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
-    <h5><strong>Course ends: </strong><%= @course.end_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
-    <h5><strong>Class detail: </strong><%= @course.description %></h5>
- 
+<div class="card container">
+      <h1><strong>The Class with <%= @course.teacher.name %></strong></h1>
+      <h3><strong><%= @course.language.name %></strong></h3>
+      <h5><strong>Level: </strong><%= @course.level %></h5>
+      <h5><strong>Course starts: </strong> <%= @course.start_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
+      <h5><strong>Course ends: </strong><%= @course.end_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
+      <h5><strong>Class detail: </strong><%= @course.description %></h5>
 </div>
