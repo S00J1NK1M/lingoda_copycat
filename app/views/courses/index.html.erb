@@ -1,8 +1,28 @@
-<h1>hey</h1>
+<div class="banner--unlog m-5">
 
-<% @courses.each do |course| %>
-  <%= course.language.name %>
-  <%= course.teacher.name %>
-  <%= course.level %>
-  <%= course.created_at %>
-<% end %>
+  <h1 class="">Wellcome to Lingoda Copycat!</h1>
+   <%=link_to "LogOUT", root_path, class: "button center" %>
+
+</div>
+<div class="filters">
+  <i class="fa-solid fa-filter $green"></i>
+</div>
+<div class="container">
+
+  <div class="grid">
+    <% @courses.each do |course| %>
+        <div class="card container relativ">
+        <div class="middle">
+          <div class="d-flex">
+            <h1 > <%= course.language.name %> &nbsp; </h1>
+            <h1> <%= course.level %> </h1>
+          </div>
+            <h4>Teacher <%= course.teacher.name %></h4>
+            <h4><%= course.start_at.strftime("%d/%m/%y %M:%S") %></h4>
+          </div>
+          <%# course GET    /courses/:id(.:format)  courses#show %>
+          <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
+        </div>
+    <% end %>
+  </div>
+</div>
