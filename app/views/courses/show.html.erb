@@ -1,8 +1,23 @@
-<div class="card container">
-      <h1><strong>The Class with <%= @course.teacher.name %></strong></h1>
-      <h3><strong><%= @course.language.name %></strong></h3>
-      <h5><strong>Level: </strong><%= @course.level %></h5>
-      <h5><strong>Course starts: </strong> <%= @course.start_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
-      <h5><strong>Course ends: </strong><%= @course.end_at.strftime("%d/%m/%Y %I:%M %p") %></h5>
-      <h5><strong>Class detail: </strong><%= @course.description %></h5>
+<div class="container">
+  <div class="container">
+    <div class="banner--home mx-5 middle--h">
+      <h1 class="">Welcome to Lingoda Copycat!</h1>
+      <%=link_to "Logout", root_path, class: "button center" %>
+    </div>
+  </div>
+</div>
+
+<div class="card container text-center">
+  <div class="middle--w">
+
+      <h1>The Class with <strong><%= @course.teacher.name %></strong></h1>
+      <h3><%= @course.language.name.upcase %></h3>
+      <h5>Level: <strong><%= @course.level %></strong></h5>
+      <h5>Course starts:  <strong><%= @course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
+      <h5>Course ends: <strong><%= @course.end_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
+      <h5>Class detail: <strong><%= @course.description %></strong></h5>
+      <%=link_to "<< Back to Courses", courses_path, class: "lower--left m-3" %>
+      <%=link_to "Book", bookings_path, class: "button center lower--right m-3" %>
+
+  </div>
 </div>

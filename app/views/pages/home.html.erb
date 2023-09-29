@@ -1,7 +1,7 @@
 <div class="container">
   <div class="container">
     <div class="banner--home mx-5 middle--h">
-      <h1 class="">Wellcome to Lingoda Copycat!</h1>
+      <h1 class="">Welcome to Lingoda Copycat!</h1>
       <%=link_to "Login", new_user_session_path, class: "button center" %>
     </div>
   </div>
@@ -12,7 +12,7 @@
     <i class="fa-solid fa-filter $green"></i>
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Lenguage
+        Language
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
@@ -63,7 +63,7 @@
             <h1> <%= course.level %> </h1>
           </div>
             <h4>Teacher <%= course.teacher.name %></h4>
-            <h4><%= course.start_at.strftime("%d/%m/%y %M:%S") %></h4>
+            <h4><%= course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></h4>
           </div>
           <%# course GET    /courses/:id(.:format)  courses#show %>
           <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
