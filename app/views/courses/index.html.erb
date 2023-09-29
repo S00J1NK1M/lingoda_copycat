@@ -8,8 +8,11 @@
 </div>
 
 <div class="container">
+
   <div class="filters d-flex mx-5">
+
     <i class="fa-solid fa-filter $green"></i>
+
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Lenguage
@@ -20,6 +23,7 @@
         <% end %>
       </div>
     </div>
+
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Level
@@ -30,26 +34,18 @@
         <% end %>
       </div>
     </div>
-     <div class="dropdown">
-      <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+    <div class="dropdown">
+      <button class="button--filter " >
         Time
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#"><%=course.language.name %></a>
-        <% end %>
-      </div>
     </div>
-     <div class="dropdown">
-      <button class="btn button--filter--green dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Level
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#"></a>
-      </div>
-    </div>
-  </div>
 
+    <button class="button--filter--green" >
+      All
+    </button>
+
+  </div>
 </div>
 
 
@@ -58,7 +54,7 @@
 
   <div class="grid">
     <% @courses.each do |course| %>
-        <div class="card card--gallery container">
+        <div class="card container relativ">
         <div class="middle--w">
           <div class="d-flex">
             <h1 > <%= course.language.name %> &nbsp; </h1>
