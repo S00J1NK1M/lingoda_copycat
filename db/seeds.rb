@@ -52,7 +52,8 @@ ukranian_A2 = {
   start_at: start_time_uk,
   end_at: start_time_uk + 1.hour,
   language_id: Language.find_by(name: 'Ukranian').id,
-  teacher_id: Teacher.find_by(name: 'Anna').id }
+  teacher_id: Teacher.find_by(name: 'Anna').id
+ }
 
 korean_B1 = {
   description: "test for korean",

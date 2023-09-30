@@ -13,46 +13,43 @@
 </div>
 
 <div class="container">
-  <div class="filters d-flex mx-5">
-    <i class="fa-solid fa-filter $green"></i>
+
+  <div class="filters d-flex mx-5 middle--h">
+
+    <i class="fa-solid fa-filter fa-2x  i--filter "></i>
+
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Language
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#"><%=course.language.name %></a>
+          <a class="dropdown-item hover-bg " href="#"><%=course.language.name %></a>
         <% end %>
       </div>
     </div>
+
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Level
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#"><%=course.level %></a>
+          <a class="dropdown-item hover-bg center" href="#"><%=course.level %></a>
         <% end %>
       </div>
     </div>
-     <div class="dropdown">
-      <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+    <div class="dropdown">
+      <button class="btn button--filter dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Time
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#"><%=course.language.name %></a>
-        <% end %>
-      </div>
     </div>
-     <div class="dropdown">
-      <button class="btn button--filter--green dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Level
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#"></a>
-      </div>
-    </div>
+
+    <button class="btn center button--filter--green ">
+      Reset
+    </button>
+
   </div>
 
 </div>
@@ -68,7 +65,8 @@
             <h1> <%= course.level %> </h1>
           </div>
             <h4>Teacher <%= course.teacher.name %></h4>
-            <h4><%= course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></h4>
+            <h4><%= course.start_at.strftime("%A,") %></h4>
+            <h4><%= course.start_at.strftime("%e %B %Y") %></h4>
           </div>
           <%# course GET    /courses/:id(.:format)  courses#show %>
           <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
