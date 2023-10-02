@@ -11,3 +11,25 @@
 .card--gallery {
   width: 345px;
 }
+
+.card--innerbooking {
+  color: $green;
+  background-color: $milk;
+  height: 120px;
+  width: 550px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 1px 3px 5px orange;
+  border: 0.1px solid orange;
+}
+
+.card--outerbooking {
+  color: $green;
+  background-color: $yellow;
+  height: 170px;
+  width: 600px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 1px 3px 5px orange;
+  border: 0.1px solid orange;
+}
