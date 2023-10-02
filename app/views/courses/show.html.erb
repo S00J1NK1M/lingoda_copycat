@@ -16,7 +16,7 @@
       <h5>Course starts:  <strong><%= @course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
       <h5>Course ends: <strong><%= @course.end_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
       <h5>Class detail: <strong><%= @course.description %></strong></h5>
-      <%=link_to "<< Back to Courses", courses_path, class: "lower--left m-3" %>
+      <%=link_to "<< Back to Courses", course_path, class: "lower--left m-3" %>
       <%=link_to "Book", bookings_path, class: "button center lower--right m-3" %>
 
   </div>
