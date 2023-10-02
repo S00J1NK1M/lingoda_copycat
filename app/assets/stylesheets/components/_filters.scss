@@ -49,3 +49,17 @@
     color: $orange;
   }
 }
+
+.button--filter--reset{
+  border-color: $green;
+  color: $green;
+  background: $white;
+  border-radius: 50px;
+  width: 120px;
+  margin-right: 10px;
+
+  &:hover{
+    background-color: $green;
+    color: $milk;
+  }
+}
