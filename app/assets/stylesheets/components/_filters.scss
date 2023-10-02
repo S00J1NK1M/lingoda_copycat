@@ -1,0 +1,50 @@
+.filters{
+  height: 50px;
+}
+
+.i--filter{
+  color: $green;
+  width: 34px;
+  height: 40.25px;
+  left: 0px;
+  top: 2.88px;
+}
+.button--filter{
+  color: $green;
+  background: $milk;
+  border-radius: 50px;
+  width: 120px;
+  margin-right: 10px;
+
+  &:hover{
+    background-color: $orange;
+    color: $green;
+  }
+}
+
+.button--filter--green{
+  color: $milk;
+  background: $green;
+  border-radius: 50px;
+  width: 100px;
+  margin-right: 10px;
+  height: 30px;
+
+  &:hover{
+    background-color: $orange;
+    color: $green;
+  }
+}
+
+.dropdown-menu{
+  background-color: $orange;
+  min-width: 120px;
+}
+
+.hover-bg{
+  &:hover{
+    border-radius: 50px;
+    background-color: $green;
+    color: $milk;
+  }
+}
