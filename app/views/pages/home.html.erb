@@ -10,7 +10,7 @@
 
   <div class="filters d-flex mx-5 middle--h">
 
-    <i class="fa-solid fa-filter fa-2x  i--filter"></i>
+    <i class="fa-solid fa-arrow-down-wide-short ms-3 me-3" style="color: #083f27;"></i>
 
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,7 +18,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item hover-bg " href="#"><%=course.language.name %></a>
+          <a class="dropdown-item hover-bg" href="#" style="color:#F5F5DC"><%=course.language.name %></a>
         <% end %>
       </div>
     </div>
@@ -29,18 +29,12 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item hover-bg center" href="#"><%=course.level %></a>
+          <a class="dropdown-item hover-bg center" style="color:#F5F5DC" href="#"><%=course.level %></a>
         <% end %>
       </div>
     </div>
 
-    <div class="dropdown">
-      <button class="btn button--filter dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Time
-      </button>
-    </div>
-
-    <button class="btn center button--filter--green ">
+    <button class="btn center button--filter">
       Reset
     </button>
 
