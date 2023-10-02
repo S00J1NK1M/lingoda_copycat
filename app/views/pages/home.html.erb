@@ -1,13 +1,7 @@
 <div class="container">
   <div class="container">
     <div class="banner--home mx-5 middle--h">
-      <h1 class="">Wellcome to Lingoda Copycat!</h1>
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, class: "button center", data: {turbo_method: :delete} %>
-      <% else %>
-        <%= link_to "Login", new_user_session_path, class: "button center" %>
-      <% end %>
-
+      <h1 class="">Welcome to Lingoda Copycat 🐈</h1>
     </div>
   </div>
 </div>
@@ -16,7 +10,7 @@
 
   <div class="filters d-flex mx-5 middle--h">
 
-    <i class="fa-solid fa-filter fa-2x  i--filter "></i>
+    <i class="fa-solid fa-filter fa-2x  i--filter"></i>
 
     <div class="dropdown">
       <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,7 +62,6 @@
             <h4><%= course.start_at.strftime("%A,") %></h4>
             <h4><%= course.start_at.strftime("%e %B %Y") %></h4>
           </div>
-          <%# course GET    /courses/:id(.:format)  courses#show %>
           <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
         </div>
     <% end %>
