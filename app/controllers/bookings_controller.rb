@@ -1,18 +1,30 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[index new create destroy]
+  before_action :set_booking, only: %i[destroy]
 
   def index
+    # we need the current user to filter
     @bookings = Booking.all
   end
 
   def new
-    @booking = Booking.new
+    # @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    # Find a specific course
+    @course = Course.find(params[:course_id])
+    @booking = Booking.new
+
+    @booking.course = @course
+
+    # Find the current user
+    @booking.user = current_user
+
+    # Save
     @booking.save
-    redirect_to booking_path(@booking)
+
+    # Go to bookings/index
+    redirect_to bookings_path
   end
 
   def destroy
