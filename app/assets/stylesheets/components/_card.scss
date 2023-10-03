@@ -1,15 +1,16 @@
 .card{
   color: $green;
   background-color: $yellow;
-  height: 400px;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 1px 3px 5px orange;
-  border: 0.1px solid orange;
+}
+.card--details{
+  height: 600px;
 }
 
 .card--gallery {
-  width: 345px;
+  width: 400px;
+  height: 400px;
 }
 
 .card--innerbooking {

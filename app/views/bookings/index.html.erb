@@ -2,7 +2,6 @@
   <div class="container">
     <div class="banner--home mx-5 middle--h">
       <h1 class="">Your bookings</h1>
-      <%=link_to "Logout", root_path, class: "button center" %>
     </div>
   </div>
   <div class="container">
@@ -16,7 +15,7 @@
             Topic: <%= booking.course.description%></h5>
 
           </div>
-          
+
           <%= link_to "Cancel Booking", course_path(booking.course.id), class: 'button center mt-2' %>
           </div>
         <br>

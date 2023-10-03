@@ -42,11 +42,20 @@
   min-width: 120px;
 }
 
-.hover-bg{
+// .hover-bg{
+//   &:hover{
+//     border-radius: 50px;
+//     background-color: $green;
+//     color: $orange;
+//   }
+// }
+
+.dropdown-item{
+  color: $milk;
   &:hover{
+    background-color: $milk;
+    color: $green;
     border-radius: 50px;
-    background-color: $green;
-    color: $orange;
   }
 }
 
