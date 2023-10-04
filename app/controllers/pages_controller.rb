@@ -7,6 +7,5 @@ class PagesController < ApplicationController
     @languages = @courses.map { |course| course.language.name }
 
     @languages_filtered = @languages.uniq
-    raise
   end
 end
