@@ -13,7 +13,7 @@
         </div>
       <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
       <%=link_to "<< Back to Courses", courses_path, class: "lower--left m-3" %>
-      <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post" }, class: "button center lower--right m-3" %>
+      <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center lower--right m-3" %>
       </div>
   </div>
 </div>
