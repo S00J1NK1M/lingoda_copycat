@@ -9,9 +9,10 @@
   left: 0px;
   top: 2.88px;
 }
+
 .button--filter{
   color: $green;
-  background: $milk;
+  background-color: $milk;
   border-radius: 50px;
   width: 120px;
   margin-right: 10px;
@@ -22,13 +23,12 @@
   }
 }
 
-.button--filter--green{
+.button--filter--login{
   color: $milk;
   background: $green;
   border-radius: 50px;
-  width: 100px;
+  width: 120px;
   margin-right: 10px;
-  height: 30px;
 
   &:hover{
     background-color: $milk;
@@ -56,6 +56,8 @@
     background-color: $milk;
     color: $green;
     border-radius: 50px;
+    background-color: $green;
+    color: $milk;
   }
 }
 

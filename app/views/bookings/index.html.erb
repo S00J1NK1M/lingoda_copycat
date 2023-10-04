@@ -1,24 +1,29 @@
 <div class="container">
   <div class="container">
     <div class="banner--home mx-5 middle--h">
-      <h1 class="">Your bookings</h1>
+      <h1 class="">Your Courses 📖</h1>
     </div>
   </div>
   <div class="container">
 
 
-    <% @bookings.each do |booking| %>
-        <div class="d-flex align-items-start flex-column card--outerbooking">
-          <div class="d-flex mb-auto p-2 card--innerbooking">
-            <h5><%= booking.course.language.name.upcase %>  <%= booking.course.level %> with <strong><%= booking.course.teacher.name %></strong> <br>
-            start: <%= booking.course.start_at.strftime("%e-%m-%y at %H.%M") %> <br>
-            Topic: <%= booking.course.description%></h5>
-
-          </div>
-
-          <%= link_to "Cancel Booking", course_path(booking.course.id), class: 'button center mt-2' %>
-          </div>
-        <br>
+<div class="container">
+  <% @bookings.each do |booking| %>
+      <div class="d-flex align-items-start flex-column card--outerbooking">
+        <div class="d-flex mb-auto p-2 card--innerbooking">
+          <h5><%= booking.course.language.name.upcase %>  <%= booking.course.level %> with <strong><%= booking.course.teacher.name %></strong> <br>
+          start: <%= booking.course.start_at.strftime("%e-%m-%y at %H.%M") %> <br>
+          Topic: <%= booking.course.description%></h5>
+        </div>
+        <%= link_to "Cancel Booking", course_path(booking.course.id), class: 'button center mt-2' %>
+      </div>
+      <br>
+  <% end %>
+  <div class="d-flex align-items-end flex-column">
+    <div class="d-flex mb-auto p-2">
+    <%= month_calendar do |date| %>
+      <%= date.day %>
     <% end %>
+    </div>
   </div>
 </div>
