@@ -1,7 +1,7 @@
 <div class="container">
   <div class="container">
     <div class="banner--home mx-5 middle--h">
-    <h1 class="">Hi, <span style="background-color:#004225;color:#F5F5DC">  <%= current_user.nickname %></span>! <br> Welcome to  Lingoda Copycat 🐈</h1>    </div>
+    <h1 class="">Hi,   <%= current_user.nickname %></span>! <br> Welcome to  Lingoda Copycat 🐈</h1>    </div>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item hover-bg" href="#" style="color:#F5F5DC"><%=course.language.name %></a>
+          <a class="dropdown-item hover-bg" href="#" ><%=course.language.name %></a>
         <% end %>
       </div>
     </div>
@@ -28,7 +28,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item hover-bg center" style="color:#F5F5DC" href="#"><%=course.level %></a>
+          <a class="dropdown-item hover-bg center"  href="#"><%=course.level %></a>
         <% end %>
       </div>
     </div>
