@@ -24,11 +24,10 @@ chinese = { name: "Chinese" }
 polish = { name: "Polish" }
 danish = { name: "Danish" }
 arabic = { name: "Arabic" }
-english = { name: "English" }
 greek = { name: "Greek" }
 turkish = { name: "Turkish" }
 
-[italian, ukranian, korean, english, german, spanish, portuguese, french, finnish, japanese, chinese, polish, danish, arabic, english, greek, turkish].each do |attributes|
+[italian, ukranian, korean, english, german, spanish, portuguese, french, finnish, japanese, chinese, polish, danish, arabic, greek, turkish].each do |attributes|
   language = Language.create!(attributes)
   puts "Created #{language.name}"
 end
@@ -48,14 +47,13 @@ shamaila = { name: "Shamaila" }
 shaka = { name: "Shaka" }
 mari = { name: "Mari" }
 julia = { name: "Julia" }
-akane = { name: "Akane" }
 marianna = { name: "Marianna" }
 oliver = { name: "Oliver" }
 jose = { name: "Jose" }
 olga = { name: "Olga" }
 maria = { name: "Maria" }
 
-[matteo, anna, eric, soojin, akane, cuilu, ardian, shakar, arianna, juan, shamaila, shaka, mari, julia, akane, marianna, oliver, jose, olga, maria].each do |attributes|
+[matteo, anna, eric, soojin, akane, cuilu, ardian, shakar, arianna, juan, shamaila, shaka, mari, julia, marianna, oliver, jose, olga, maria].each do |attributes|
   teacher = Teacher.create!(attributes)
   puts "Created #{teacher.name}"
 end
@@ -73,9 +71,7 @@ start_time_9 = DateTime.now + (rand * 21)
 start_time_10 = DateTime.now + (rand * 21)
 start_time_11 = DateTime.now + (rand * 21)
 start_time_12 = DateTime.now + (rand * 21)
-start_time_it = DateTime.now + 3
-start_time_uk = DateTime.now + 4
-start_time_ko = DateTime.now + 5
+start_time_13 = DateTime.now + (rand * 21)
 
 italian_A1 = {
   description: "Here you'll learn: how to say which country something/someone is in, how to conjugate regular verbs ending in -are in the plural and the difference between in and a with cities and countries",
@@ -148,8 +144,8 @@ ukranian_A2 = {
 korean_B1 = {
   description: "Here you'll learn: the vocabulary from the past two lessons the forms of the verb '감사합니다' negation",
   level: "B1",
-  start_at: start_time_7,
-  end_at: start_time_7 + 1.hour,
+  start_at: start_time_6,
+  end_at: start_time_6 + 1.hour,
   language_id: Language.find_by(name: 'Korean').id,
   teacher_id: Teacher.find_by(name: 'Soojin').id }
 
@@ -161,8 +157,8 @@ course_korean_B1.save
 italian_A1 = {
   description: "test for italian",
   level: "A1",
-  start_at: start_time_it,
-  end_at: start_time_it + 1.hour,
+  start_at: start_time_7,
+  end_at: start_time_7 + 1.hour,
   language_id: Language.find_by(name: 'Italian').id,
   teacher_id: Teacher.find_by(name: 'Matteo').id
 }
@@ -175,8 +171,8 @@ course_italian_A1.save
 ukranian_A2 = {
   description: "test for ukranian",
   level: "A2",
-  start_at: start_time_uk,
-  end_at: start_time_uk + 1.hour,
+  start_at: start_time_8,
+  end_at: start_time_8 + 1.hour,
   language_id: Language.find_by(name: 'Ukranian').id,
   teacher_id: Teacher.find_by(name: 'Anna').id
  }
@@ -189,8 +185,8 @@ course_ukranian_A2.save
 korean_B1 = {
   description: "test for korean",
   level: "B1",
-  start_at: start_time_ko,
-  end_at: start_time_ko + 1.hour,
+  start_at: start_time_9,
+  end_at: start_time_9 + 1.hour,
   language_id: Language.find_by(name: 'Korean').id,
   teacher_id: Teacher.find_by(name: 'Eric').id
 }
@@ -203,8 +199,8 @@ course_korean_B1.save
 german_C1 = {
   description: "Here you'll learn: some common verbs of movement how to form the perfekt using partizip II + past participle",
   level: "C1",
-  start_at: start_time_9,
-  end_at: start_time_9 + 1.hour,
+  start_at: start_time_10,
+  end_at: start_time_10 + 1.hour,
   language_id: Language.find_by(name: 'German').id,
   teacher_id: Teacher.find_by(name: 'Eric').id
 }
@@ -217,8 +213,8 @@ course_german_C1.save
 german_A1 = {
   description: "Here you'll learn: Guten Morgen, Guten Tag, Guten Abend und Gute Nacht",
   level: "A1",
-  start_at: start_time_10,
-  end_at: start_time_10 + 1.hour,
+  start_at: start_time_11,
+  end_at: start_time_11 + 1.hour,
   language_id: Language.find_by(name: 'German').id,
   teacher_id: Teacher.find_by(name: 'Eric').id
 }
@@ -231,8 +227,8 @@ course_german_A1.save
 japanese_B1 = {
   description: "Here you'll learn: how to order food, how to buy in a supermarket and how to pay",
   level: "B1",
-  start_at: start_time_11,
-  end_at: start_time_11 + 1.hour,
+  start_at: start_time_12,
+  end_at: start_time_12 + 1.hour,
   language_id: Language.find_by(name: 'Japanese').id,
   teacher_id: Teacher.find_by(name: 'Akane').id }
 
@@ -244,8 +240,8 @@ japanese_B1 = {
 japanese_B1 = {
   description: "Here you'll learn: to talk about health, the singular forms and how to use them",
   level: "B1",
-  start_at: start_time_12,
-  end_at: start_time_12 + 1.hour,
+  start_at: start_time_13,
+  end_at: start_time_13 + 1.hour,
   language_id: Language.find_by(name: 'Japanese').id,
   teacher_id: Teacher.find_by(name: 'Akane').id
 }
