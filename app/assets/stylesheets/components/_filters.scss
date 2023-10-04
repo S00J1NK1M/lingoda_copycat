@@ -22,13 +22,12 @@
   }
 }
 
-.button--filter--green{
+.button--filter--login{
   color: $milk;
   background: $green;
   border-radius: 50px;
-  width: 100px;
+  width: 120px;
   margin-right: 10px;
-  height: 30px;
 
   &:hover{
     background-color: $milk;
