@@ -26,12 +26,12 @@ class BookingsController < ApplicationController
     @booking.save
 
     # Go to bookings/index
-    redirect_to bookings_path
+    redirect_to bookings_path, notice: "Booking's done! 😀"
   end
 
   def destroy
     @booking.destroy
-    redirect_to bookings_path, status: :see_other
+    redirect_to bookings_path, status: :see_other, alert: "The course has been canceled! 🥺"
   end
 
   private
