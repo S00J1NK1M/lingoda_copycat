@@ -18,7 +18,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#" style="color:#F5F5DC"><%=course.language.name %></a>
+          <a class="dropdown-item" href="#" ><%=course.language.name %></a>
         <% end %>
       </div>
     </div>
@@ -29,7 +29,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% @courses.each do |course| %>
-          <a class="dropdown-item hover-bg center" style="color:#F5F5DC" href="#"><%=course.level %></a>
+          <a class="dropdown-item hover-bg center"  href="#"><%=course.level %></a>
         <% end %>
       </div>
     </div>

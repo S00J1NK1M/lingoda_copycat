@@ -53,6 +53,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "devise"
+gem "cloudinary"
 gem "simple_calendar", "~> 2.4"
 
 group :development, :test do
@@ -87,4 +88,5 @@ group :test do
   gem 'warden-rspec-rails'
   gem 'webdrivers'
   gem 'rails-controller-testing'
+
 end
