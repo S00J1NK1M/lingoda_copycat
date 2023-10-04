@@ -9,9 +9,10 @@
   left: 0px;
   top: 2.88px;
 }
+
 .button--filter{
   color: $green;
-  background: $milk;
+  background-color: $milk;
   border-radius: 50px;
   width: 120px;
   margin-right: 10px;
@@ -46,7 +47,7 @@
   &:hover{
     border-radius: 50px;
     background-color: $green;
-    color: $orange;
+    color: $milk;
   }
 }
 
