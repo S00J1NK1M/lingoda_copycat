@@ -11,39 +11,59 @@
   <div class="filters d-flex mx-5 middle--h">
 
     <i class="fa-solid fa-arrow-down-wide-short ms-3 me-3" style="color: #083f27;"></i>
-
-    <div class="dropdown">
-      <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Language
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown button--filter">
+      <button onclick="myFunction()" class="dropbtn">Language</button>
+      <div id="myDropdown" class="dropdown-content ">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
         <% @courses.each do |course| %>
-          <a class="dropdown-item" href="#" ><%=course.language.name %></a>
+              <a class="dropdown-item hover-bg center" href="#" ><%=course.language.name %></a>
         <% end %>
       </div>
     </div>
 
-    <div class="dropdown">
-      <button class="btn button--filter dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Level
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown button--filter">
+      <button onclick="myFunction()" class="dropbtn">Level</button>
+      <div id="myDropdown" class="dropdown-content ">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
         <% @courses.each do |course| %>
           <a class="dropdown-item hover-bg center"  href="#"><%=course.level %></a>
+
         <% end %>
       </div>
     </div>
 
     <button class="btn center button--filter--reset">
-      Reset
+          Reset
     </button>
+      <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.getElementsByTagName("a");
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+      </script>
 
   </div>
 
 </div>
 
 <div class="container">
-
   <div class="grid">
     <% @courses.each do |course| %>
         <div class="card card--gallery container">
