@@ -6,14 +6,17 @@ class PagesController < ApplicationController
     @courses = Course.all
     @languages = @courses.map { |course| course.language.name }
 
-    @languages_filtered = @languages.uniq
+    @languages_filtered = Language.all.pluck(:name).uniq.sort
+    @levels = ["A1", "A2", "B1", "B2", "C1"]
 
-    if params[:query].present?
-      @courses = Course.joins(:language).where("languages.name ILIKE '#{params[:query]}'")
+    if params[:query].present? && params[:level_query].present?
+      @courses = @courses.joins(:language)
+      .where("languages.name ILIKE '#{params[:query]}'")
+      .where("level ILIKE '#{params[:level_query]}'")
+    elsif params[:query].present?
+      @courses = @courses.joins(:language).where("languages.name ILIKE '#{params[:query]}'")
     elsif params[:level_query].present?
-      @courses = Course.where("level ILIKE '#{params[:level_query]}'")
-    else
-      "Sorry, no courses found."
+      @courses = @courses.where("level ILIKE '#{params[:level_query]}'")
     end
   end
 end
