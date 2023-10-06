@@ -1,10 +1,19 @@
-<div class="container">
+<% if user_signed_in? %>
   <div class="container">
-    <div class="banner--home mx-5 middle--h">
-      <h1 class="">Welcome to Lingoda Copycat 🐈</h1>
+    <div class="container">
+      <div class="banner--home mx-5 middle--h">
+      <h1 class="">Hi, <span style="background-color: #004225; color: white"> <%= current_user.nickname %> </span>! <br> Welcome to  Lingoda Copycat 🐈</h1>    </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="container">
+    <div class="container">
+      <div class="banner--home mx-5 middle--h">
+        <h1 class="">Welcome to Lingoda Copycat 🐈</h1>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <div class="container">
 
