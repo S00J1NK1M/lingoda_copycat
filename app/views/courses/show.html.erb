@@ -1,5 +1,5 @@
-
-<div class="card m-5  text-center card--details">
+<div class= "container">
+<div class="card mt-5  text-center card--details">
   <div class="middle--w">
 
       <div class="img--details center" style= "background-image: linear-gradient( rgba(255, 174, 0, 0.52), rgba(255, 174, 0, 0.73)),  url(<%= cl_image_path(@course.photo.key) %>);">
@@ -16,4 +16,5 @@
       <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center lower--right m-3" %>
       </div>
   </div>
+</div>
 </div>
