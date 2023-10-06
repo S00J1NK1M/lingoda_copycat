@@ -105,18 +105,45 @@
 <div class="container">
   <div class="grid">
     <% @courses.each do |course| %>
-        <div class="card card--gallery container">
+      <div class="card card--gallery container">
         <div class="middle--w">
+          <% if course.language.name == "Italian" %>
+            <div class="image-box mb-3">
+              <%= image_tag "italian.png", class: "image-thumbnail", alt: "italian" %>
+            </div>
+          <% elsif course.language.name == "German" %>
+            <div class="image-box mb-3">
+              <%= image_tag "german.png", class: "image-thumbnail", alt: "german" %>
+            </div>
+          <% elsif course.language.name == "Korean" %>
+            <div class="image-box mb-3">
+              <%= image_tag "korean.png", class: "image-thumbnail", alt: "korean" %>
+            </div>
+          <% elsif course.language.name == "Japanese" %>
+          <div class="image-box mb-3">
+            <%= image_tag "japanese.png", class: "image-thumbnail", alt: "japanese" %>
+          </div>
+          <% elsif course.language.name == "Ukranian" %>
+          <div class="image-box mb-3">
+            <%= image_tag "ukranian.png", class: "image-thumbnail", alt: "ukranian" %>
+          </div>
+          <% else %>
+            <div class="image-box mb-3">
+              <%= image_tag "language.png", class: "image-thumbnail", alt: "language" %>
+            </div>
+          <% end %>
+
           <div class="d-flex">
             <h1 > <%= course.language.name %> &nbsp; </h1>
             <h1> <%= course.level %> </h1>
           </div>
-            <h4>Teacher <%= course.teacher.name %></h4>
-            <h4><%= course.start_at.strftime("%A,") %></h4>
-            <h4><%= course.start_at.strftime("%e %B %Y") %></h4>
-          </div>
-          <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
+
+          <h4>Teacher <%= course.teacher.name %></h4>
+          <h4><%= course.start_at.strftime("%A,") %></h4>
+          <h4><%= course.start_at.strftime("%e %B %Y") %></h4>
         </div>
+          <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
+      </div>
     <% end %>
   </div>
 </div>
