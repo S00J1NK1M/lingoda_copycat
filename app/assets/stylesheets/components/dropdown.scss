@@ -16,6 +16,9 @@
   }
 }
 
+
+
+
 .dropbtn {
   color: $green;
   background: $milk;
@@ -23,12 +26,15 @@
   width: 120px;
   height: 38px;
   margin-right: 10px;
+  border-style: none;
 
   &:hover{
     background-color: $green;
     color: $milk;
   }
 }
+
+
 
 #myInput {
   // height: 50px;
