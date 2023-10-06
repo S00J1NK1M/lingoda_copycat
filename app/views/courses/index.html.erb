@@ -13,7 +13,7 @@
 
     <div class="dropdown button--filter">
       <button onclick="myFunction('myDropdown')" class="dropbtn">Language</button>
-      <div id="myDropdown" class="dropdown-content ">
+      <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
         <% Language.all.pluck(:name).uniq.sort.each do |language| %>
             <%= link_to language, root_path(query: language), class: "dropdown-item hover-bg center" %>
@@ -23,7 +23,7 @@
 
     <div class="dropdown button--filter">
       <button onclick="myFunction('myDropdown2')" class="dropbtn">Level</button>
-      <div id="myDropdown2" class="dropdown-content ">
+      <div id="myDropdown2" class="dropdown-content">
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
         <% ["A1", "A2", "B1", "B2", "C1"].each do |level| %>
           <%= link_to level, root_path(level_query: level), class: "dropdown-item hover-bg center" %>
@@ -79,4 +79,11 @@
         </div>
     <% end %>
   </div>
+</div>
+
+<div class="container">
+  <footer>
+    <p>© 2023 Lingoda Copycat by Ping it Team</p>
+    <p><a href="mailto:contact.soojin.kim@gmail.com">lingodacopycat@pingit.com</a></p>
+  </footer>
 </div>
