@@ -144,9 +144,8 @@ ukranian_1 = {
  course_ukranian_1.photo.attach(io: img, filename: "nes.png", content_type: "image/png")
  course_ukranian_1.save
 
-
 ukranian_2 = {
-  description: "test for ukranian",
+  description: "Here you'll learn: How to order food in a restaurant",
   level: "A2",
   start_at: start_time_6,
   end_at: start_time_6 + 1.hour,
@@ -175,7 +174,7 @@ course_korean_1.save
 
 
 korean_2 = {
-  description: "test for korean",
+  description: "Here you'll learn: How to ask dicrections on the street, or use transportations",
   level: "B1",
   start_at: start_time_8,
   end_at: start_time_8 + 1.hour,
