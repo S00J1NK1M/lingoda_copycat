@@ -9,12 +9,16 @@
 }
 
 .img--details{
-  min-height: 600px;
+  min-height: 500px;
   width: 100%;
   object-fit: cover;
   object-position: top;
   background-size: cover;
   border-radius: 20px;
+  background-color: $yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card--gallery {
@@ -43,4 +47,21 @@
   border-radius: 20px;
   padding: 30px;
   border: 0.1px solid orange;
+}
+
+.text-container {
+  width: 800px;
+  align-self: left;
+  margin-right: 50px;
+  position: relative;
+  left: -50px;
+
+}
+
+.img-container {
+  width: 1000px;
+  margin-left: 50px;
+  position: relative;
+  right: -50px;
+
 }

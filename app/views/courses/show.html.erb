@@ -1,28 +1,28 @@
 <div class= "container">
-  <div class="card mt-5  text-center card--details">
-    <div class="middle--w">
-      <div>
-        <div class="img--details center" style= "background-image: linear-gradient( rgba(255, 174, 0, 0.52), rgba(255, 174, 0, 0.73)),  url(<%= cl_image_path(@course.photo.key) %>);">
-          <div class="text container">
-            <h1>The Class with <strong><%= @course.teacher.name %></strong></h1>
-            <h3><%= @course.language.name.upcase %></h3>
-            <h5>Level: <strong><%= @course.level %></strong></h5>
-            <h5>Course starts:  <strong><%= @course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
-            <h5>Course ends: <strong><%= @course.end_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
-            <h5>Class detail: <strong><%= @course.description %></strong></h5>
-          </div>
+  <div class="img--details  mt-5">
+  <%#=  style= "background-image: linear-gradient( rgba(255, 174, 0, 0.52), rgba(255, 174, 0, 0.73)),  url(<%= cl_image_path(@course.photo.key) %>
+    <div class=" d-flex justify-content-between">
+
+        <div class="img-container">
+          <%= image_tag "korean.png", class: "image-detail" %>
+        </div>
+
+        <div class= "text-container">
+          <h1>The Class with <strong><%= @course.teacher.name %></strong></h1>
+          <h3><%= @course.language.name.upcase %></h3>
+          <h5>Level: <strong><%= @course.level %></strong></h5>
+          <h5>Course starts:  <strong><%= @course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
+          <h5>Course ends: <strong><%= @course.end_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
+          <h5 >Class detail: <%= @course.description %></h5>
         </div>
       </div>
 
-      <div class="">
-      </div>
+
+        <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
+        <div class=" d-flex justify-content-between">
+        <%=link_to "Back to Courses", courses_path, class: "button--back center mt-5 ms-5" %>
+        <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center mt-5 me-5" %>
+        </div>
     </div>
 
-    <div>
-      <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
-      <%=link_to "<< Back to Courses", courses_path, class: "lower--left m-3" %>
-      <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center lower--right m-3" %>
-    </div>
-
-  </div>
 </div>

@@ -5,10 +5,27 @@
   height: 45px;
   border-radius: 50px;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover{
     background-color: $milk;
     color: $green;
+  }
+
+}
+
+.button--back{
+  background-color: $milk ;
+  color: $green;
+  width: 140px;
+  height: 45px;
+  border-radius: 50px;
+  text-decoration: none;
+
+
+  &:hover{
+    background-color: $green;
+    color: $milk;
   }
 
 }
