@@ -18,7 +18,7 @@
   background-color: $milk ;
   color: $green;
   width: 140px;
-  height: 45px;
+  height: 38px;
   border-radius: 50px;
   text-decoration: none;
 
@@ -53,6 +53,7 @@
   height: 38px;
   text-decoration: none;
   margin-right: 10px;
+  border-style: none;
 
   &:hover{
     background-color: $milk;
@@ -98,6 +99,7 @@
   height: 38px;
   text-decoration: none;
   margin-right: 10px;
+  border-style: none;
 
   &:hover{
     background-color: $milk;
