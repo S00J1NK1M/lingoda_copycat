@@ -98,8 +98,8 @@
             <h1> <%= course.level %> </h1>
           </div>
 
-          <h4>Teacher <%= course.teacher.name %></h4>
-          <h4><%= course.start_at.strftime("%A,") %></h4>
+          <h4>with <strong><%= course.teacher.name %></strong></h4>
+          <h4>on <%= course.start_at.strftime("%A") %></h4>
           <h4><%= course.start_at.strftime("%e %B %Y") %></h4>
         </div>
           <%= link_to "Details", course_path(course.id), class: 'button center lower--right m-3' %>
