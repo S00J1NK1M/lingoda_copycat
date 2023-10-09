@@ -35,8 +35,32 @@
 
       <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
       <div class=" d-flex justify-content-between">
-      <%=link_to "Back to Courses", courses_path, class: "button--back center mt-5 ms-5" %>
-      <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center mt-5 me-5" %>
+        <%=link_to "Back to Courses", courses_path, class: "button--back center mt-5 ms-5" %>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="button--cancel--booking1 mt-5 me-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Book it
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog"  >
+            <div class="modal-content">
+              <div class="modal-header" style="background-color:#FFB000" >
+                <h1 class="modal-title fs-5" style="color:#004225" id="staticBackdropLabel">Booking Confirmation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Are you sure you want to book this course?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="detailsbtn1" data-bs-dismiss="modal">Close</button>
+                <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post"}, class: "button--cancel--booking1 center" %>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 </div>
