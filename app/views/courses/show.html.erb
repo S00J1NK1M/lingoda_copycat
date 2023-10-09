@@ -3,13 +3,29 @@
   <%#=  style= "background-image: linear-gradient( rgba(255, 174, 0, 0.52), rgba(255, 174, 0, 0.73)),  url(<%= cl_image_path(@course.photo.key) %>
     <div class=" d-flex justify-content-between">
 
-        <div class="img-container">
-          <%= image_tag "korean.png", class: "image-detail" %>
+      <div class="img-container">
+        <% if @course.language.name == "Italian" %>
+            <%= image_tag "italian.png", class: "image-detail", alt: "italian" %>
+          </div>
+        <% elsif @course.language.name == "German" %>
+            <%= image_tag "german.png", class: "image-detail", alt: "german" %>
+          </div>
+        <% elsif @course.language.name == "Korean" %>
+            <%= image_tag "korean.png", class: "image-detail", alt: "korean" %>
+          </div>
+        <% elsif @course.language.name == "Japanese" %>
+          <%= image_tag "japanese.png", class: "image-detail", alt: "japanese" %>
         </div>
+        <% elsif @course.language.name == "Ukranian" %>
+          <%= image_tag "ukranian.png", class: "image-detail", alt: "ukranian" %>
+        </div>
+        <% else %>
+            <%= image_tag "language.png", class: "image-detail", alt: "language" %>
+          </div>
+        <% end %>
 
         <div class= "text-container">
-          <h1>The Class with <strong><%= @course.teacher.name %></strong></h1>
-          <h3><%= @course.language.name.upcase %></h3>
+          <h1><%= @course.language.name.upcase %> with <strong><%= @course.teacher.name %></strong></h1>
           <h5>Level: <strong><%= @course.level %></strong></h5>
           <h5>Course starts:  <strong><%= @course.start_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
           <h5>Course ends: <strong><%= @course.end_at.strftime("%B %d, %Y at %-I:%M %p") %></strong></h5>
@@ -17,12 +33,10 @@
         </div>
       </div>
 
-
-        <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
-        <div class=" d-flex justify-content-between">
-        <%=link_to "Back to Courses", courses_path, class: "button--back center mt-5 ms-5" %>
-        <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center mt-5 me-5" %>
-        </div>
+      <%#= cl_image_tag @course.photo.key, :class => "img--details", height: 600, width: 1000, crop: "fill" %>
+      <div class=" d-flex justify-content-between">
+      <%=link_to "Back to Courses", courses_path, class: "button--back center mt-5 ms-5" %>
+      <%=link_to "Book it", course_bookings_path(@course), data: { turbo_method: "post", turbo_confirm: "Are you sure you want to book this course?" }, class: "button center mt-5 me-5" %>
+      </div>
     </div>
-
 </div>
