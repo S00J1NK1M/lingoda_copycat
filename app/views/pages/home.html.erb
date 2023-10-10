@@ -39,7 +39,7 @@
         <%= params[:level_query] || "Level" %>
       </button>
       <div id="myDropdown2" class="dropdown-content ">
-        <input type="text" placeholder="Search.." id="myInput2" onkeyup="filterFunction(event)">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(event)">
         <% @levels.each do |level| %>
             <div class="dropdown-item hover-bg center" onclick="applyFilterLevel(event)"><%= level %></div>
           <%#= link_to level, root_path(level_query: level), class: "dropdown-item hover-bg center" %>
